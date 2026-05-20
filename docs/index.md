@@ -10,3 +10,4 @@ A working notebook of bioinformatics analyses, pipelines, scripts, and lab proce
 ## How this site works
 
 Pages are Markdown files under `docs/`. Push to `main` and GitHub Actions rebuilds the site automatically. See the repo's `README.md` for local preview and contribution notes.
+
