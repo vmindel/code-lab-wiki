@@ -65,5 +65,6 @@ nav:
   - Home: index.md
   - Bioinformatics:
       - bioinformatics/index.md
+      - STAR alignment: bioinformatics/star.md     # <-- new                                                                    
   - Lab:
       - lab/index.md
