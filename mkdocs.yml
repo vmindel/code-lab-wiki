@@ -75,12 +75,17 @@ nav:
           - Download Sequencing Data: bioinformatics/general/download_sequencing.md
           - Demultiplexing (bcl2fastq): bioinformatics/general/demultiplexing.md
           - File Formats: bioinformatics/general/formats.md
-
+          - Submitting Data to SRA: bioinformatics/general/sra_submission.md
+          - Motif Finding (Homer): bioinformatics/general/homer_motif.md
+          - ChEC-seq V-plots: bioinformatics/general/chec_vplots.md
       - Mammalian:
           - bioinformatics/mammalian/index.md
+          - Peak Calling (MACS3): bioinformatics/mammalian/peak_calling_macs3.md
+          - CREs Data (SCREEN): bioinformatics/mammalian/cres_screen.md
       - Yeast:
           - bioinformatics/yeast/index.md
           - ChEC-seq: bioinformatics/yeast/chec_seq.md
+          - Peak Calling (Homer): bioinformatics/yeast/peak_calling_homer.md
   - Lab:
       - lab/index.md
       - General:
