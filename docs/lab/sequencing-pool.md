@@ -24,7 +24,7 @@ Two measurements are needed:
       <figcaption>Example of the Measured TapeStation result with the marked region in the range we need.</figcaption>
     </figure>
 
-!!! warning "Keep Attention!"
+!!! danger "Keep Attention!"
     Examine carefully your Pool. If it has a lot of Adapter Dimer Fragments ~155(bp)- perform a x0.8 SPRI cleanup. The same goes to very long fragments- reverse cleanup of x0.5 SPRI. If the concentration of your pool is really low <0.4-0.5 $ng/ul$ perform 1x SPRI cleanup and elute it in the lower volume to concentrate.
 
 ### 2.1 Sequencing with other groups
