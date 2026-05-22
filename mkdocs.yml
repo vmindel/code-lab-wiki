@@ -60,11 +60,23 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md
   - Bioinformatics:
       - bioinformatics/index.md
-      - STAR alignment: bioinformatics/star.md     # <-- new                                                                    
+      - General:
+          - bioinformatics/general/index.md
+      - Mammalian:
+          - bioinformatics/mammalian/index.md
+      - Yeast:
+          - bioinformatics/yeast/index.md
+          - ChEC-seq: bioinformatics/yeast/chec_seq.md
   - Lab:
       - lab/index.md
+      - Sequencing Pool Prep: lab/sequencing-pool.md

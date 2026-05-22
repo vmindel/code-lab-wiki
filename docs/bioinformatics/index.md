@@ -1,7 +1,11 @@
 # Bioinformatics
+I will collect here usefull scripts and ways I analyze the data for myself and others. his page is also my refernce page for the markdown formatting.
+
+
 
 Pipelines, analyses, and one-off scripts.
 
+## Markdown Reference
 ---
 
 ## Example page — delete or replace
