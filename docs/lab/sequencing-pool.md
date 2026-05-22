@@ -17,7 +17,7 @@ Two measurements are needed:
     !!! tip
         It is always recommended to prepare and measure new standards before each of your measurements prior/post pooling
 
-2. Check size distribution by TapeStation. Mark the region of the tape between the 150 and 650 bp. Write down the average size (bp) and the region molarity divided by 100- to convert them to $nM$ $\frac{\text{Region Molarity}}{1000}$
+2. Check size distribution by TapeStation. Mark the region of the tape between the 150 and 650 bp. Write down the average size (bp) and the region molarity divided by 1000- to convert them to $nM$ $\frac{\text{Region Molarity}}{1000}$
 
     <figure markdown="span">
       ![Bioanalyzer trace of individual libraries](assets/tape_example.png){ width="600" }
@@ -29,7 +29,7 @@ Two measurements are needed:
 
 ### 2.1 Sequencing with other groups
 
-If you sequence with other groups they will ask you to provide them pool of the 2 $nM$ concetration:
+If you sequence with other groups they will ask you to provide them a pool of 2 $nM$ concentration:
 
 Convert ng/µL → nM using the average fragment size from the tape and the qubit measurement:
 
@@ -54,10 +54,10 @@ Using this concentration dilute your library to 2 nM. If not possible- concentra
 
 ### 3. Insert the Indexes you used in the table.
 
-Insert all of the indexes used in your pool in the tbale for the demultiplexing after the run is done.
+Insert all of the indexes used in your pool in the table for the demultiplexing after the run is done.
 
 !!! danger
-    This step is critical especially when you seqeunce with other groups. You dont want to mix-up the barcodes and also you want to get your data on time.
+    This step is critical especially when you sequence with other groups. You don't want to mix-up the barcodes and also you want to get your data on time.
 
 | barcode | Name | Lab | # Reads | Index1 name | Index1 sequence | Index2 name | Index2 sequence |
 |---------|------|-----|---------|-------------|-----------------|-------------|-----------------|
