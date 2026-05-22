@@ -20,7 +20,7 @@ Two measurements are needed:
 2. Check size distribution by TapeStation. Mark the region of the tape between the 150 and 650 bp. Write down the average size (bp) and the region molarity divided by 1000- to convert them to $nM$ $\frac{\text{Region Molarity}}{1000}$
 
     <figure markdown="span">
-      ![Bioanalyzer trace of individual libraries](assets/tape_example.png){ width="600" }
+      ![Bioanalyzer trace of individual libraries](assets/tape_example.png){ width="900" }
       <figcaption>Example of the Measured TapeStation result with the marked region in the range we need.</figcaption>
     </figure>
 

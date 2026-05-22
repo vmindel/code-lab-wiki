@@ -72,6 +72,10 @@ nav:
       - bioinformatics/index.md
       - General:
           - bioinformatics/general/index.md
+          - Download Sequencing Data: bioinformatics/general/download_sequencing.md
+          - Demultiplexing (bcl2fastq): bioinformatics/general/demultiplexing.md
+          - File Formats: bioinformatics/general/formats.md
+
       - Mammalian:
           - bioinformatics/mammalian/index.md
       - Yeast:
@@ -79,4 +83,7 @@ nav:
           - ChEC-seq: bioinformatics/yeast/chec_seq.md
   - Lab:
       - lab/index.md
+      - General:
+          - SPRI Chart: lab/general/SPRI.md
+          - Ladder: lab/general/ladder.md
       - Sequencing Pool Prep: lab/sequencing-pool.md
