@@ -73,9 +73,10 @@ nav:
       - General:
           - bioinformatics/general/index.md
           - Download Sequencing Data: bioinformatics/general/download_sequencing.md
+          - Get Index Sequences: bioinformatics/general/get_barcodes.md
           - Demultiplexing (bcl2fastq): bioinformatics/general/demultiplexing.md
           - File Formats: bioinformatics/general/formats.md
-          - Submitting Data to SRA: bioinformatics/general/sra_submission.md
+          - Submitting Data to GEO: bioinformatics/general/sra_submission.md
           - Motif Finding (Homer): bioinformatics/general/homer_motif.md
           - ChEC-seq V-plots: bioinformatics/general/chec_vplots.md
       - Mammalian:
