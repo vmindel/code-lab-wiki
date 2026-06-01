@@ -82,6 +82,7 @@ nav:
           - Useful Code Snippets:
               - bioinformatics/general/code_snippets/index.md
               - Consensus Peaks + Signal (R): bioinformatics/general/code_snippets/r_consensus_peaks_signal.md
+              - Averaging Per Nucleotide Cut Bedgraphs (R): bioinformatics/general/code_snippets/r_average_pernuc_bedgraphs.md
       - Mammalian:
           - bioinformatics/mammalian/index.md
           - Peak Calling (MACS3): bioinformatics/mammalian/peak_calling_macs3.md

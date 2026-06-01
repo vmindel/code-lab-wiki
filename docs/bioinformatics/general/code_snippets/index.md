@@ -9,6 +9,7 @@ top-right corner and adapt the variables at the top to your own paths.
 | Snippet | Language | What it does |
 | --- | --- | --- |
 | [Consensus peaks + signal over regions](r_consensus_peaks_signal.md) | R | Merge peak files into consensus regions and summarise bigWig signal over them |
+| [Averaging per-nucleotide cut bedGraphs](r_average_pernuc_bedgraphs.md) | R | Average normalised per-nucleotide cut tracks across replicates and export a mean bigWig |
 
 !!! tip "Adding a new snippet"
     Drop a new Markdown file in `docs/bioinformatics/general/code_snippets/`,

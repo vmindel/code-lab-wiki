@@ -13,7 +13,7 @@ explains every flag.
     submitting:
 
     ```bash
-    module load homer
+    module load Homer
     ```
 
     This puts Homer's executables on your `PATH` so you can call them by name
@@ -76,7 +76,7 @@ findMotifsGenome.pl <input> <genome> <output_dir> [options]
 | `-cache 2000` | Cache size in **MB** for the enrichment statistics (default 500). A larger cache keeps more of the calculation in memory, speeding up the run at the cost of RAM. |
 | `-preparsedDir /path/.../mm10/` | Directory for Homer's **pre-parsed background sequences**. Generating these is slow; pointing every run at a shared, writable folder lets Homer reuse them instead of regenerating each time. |
 
-## Before you run
+## Before you run, IF YOU ARE NOT USING THE Homer FROM THE MODULE
 
 - **Install the genome once** (if not already present):
 

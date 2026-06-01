@@ -2,7 +2,10 @@
 
 ## 1. Prepare the sample sheet
 
-
+Essentially the format for the spreadsheet is the output of the
+[Get Index Sequences](get_barcodes.md) step — running that script in your run
+folder produces `nova13_ss.csv`, which is exactly what `bcl2fastq` expects as
+`--sample-sheet` below.
 
 ## 2. Load the needed module
 ``` bash
@@ -10,7 +13,7 @@ module load bcl2fastq2
 ```
 
 ## 3. Transfer the sample sheet to the folder
-
+You can transfer your prepared sample sheet via SFTP or other means to the folder with the downloaded sequencing data.
 
 ## 4. Run the demultiplexing
 
