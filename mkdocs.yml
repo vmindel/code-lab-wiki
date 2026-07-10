@@ -74,6 +74,7 @@ nav:
           - bioinformatics/general/index.md
           - Download Sequencing Data: bioinformatics/general/download_sequencing.md
           - Get Index Sequences: bioinformatics/general/get_barcodes.md
+          - Get UDI Barcodes for a Plate: bioinformatics/general/get_barcodes_stubby.md
           - Demultiplexing (bcl2fastq): bioinformatics/general/demultiplexing.md
           - File Formats: bioinformatics/general/formats.md
           - Submitting Data to GEO: bioinformatics/general/sra_submission.md
@@ -84,6 +85,7 @@ nav:
               - Consensus Peaks + Signal (R): bioinformatics/general/code_snippets/r_consensus_peaks_signal.md
               - Averaging Per Nucleotide Cut Bedgraphs (R): bioinformatics/general/code_snippets/r_average_pernuc_bedgraphs.md
               - Signal Matrix Around Motif Sites (R): bioinformatics/general/code_snippets/r_signal_matrix_around_motifs.md
+              - Tiling Peaks into Fixed-Width Windows (R): bioinformatics/general/code_snippets/tiling_the_peaks.md
       - Mammalian:
           - bioinformatics/mammalian/index.md
           - Peak Calling (MACS3): bioinformatics/mammalian/peak_calling_macs3.md
