@@ -86,6 +86,7 @@ nav:
               - Averaging Per Nucleotide Cut Bedgraphs (R): bioinformatics/general/code_snippets/r_average_pernuc_bedgraphs.md
               - Signal Matrix Around Motif Sites (R): bioinformatics/general/code_snippets/r_signal_matrix_around_motifs.md
               - Tiling Peaks into Fixed-Width Windows (R): bioinformatics/general/code_snippets/tiling_the_peaks.md
+              - Elbow-Point Threshold for Peak Subsetting (R): bioinformatics/general/code_snippets/r_elbow_peak_threshold.md
       - Mammalian:
           - bioinformatics/mammalian/index.md
           - Peak Calling (MACS3): bioinformatics/mammalian/peak_calling_macs3.md
