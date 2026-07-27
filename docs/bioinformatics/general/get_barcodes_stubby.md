@@ -23,23 +23,36 @@ You should see something like `~/miniconda/envs/<your_env>/bin/python`.
 ## 3. Run the script
 
 ```bash
-python /home/labs/barkailab/vovam/pipelines/get_plate_indices.py <plate_number> <output.csv>
+python /home/labs/barkailab/vovam/pipelines/get_plate_indices.py <plate_number> <output.csv> [i5_orientation]
 ```
 
 Replace `<plate_number>` with the plate you need (1–16) and `<output.csv>` with the path where you want the result saved.
 
-**Example — plate 2:**
+`i5_orientation` is optional and controls which i5 sequence is written:
+
+| Value | i5 orientation | Use for |
+| ----- | -------------- | ------- |
+| `rev` / `r` (default) | reverse complement | **Illumina** sequencers |
+| `frw` / `f` | forward | **AVITI** (Element Biosciences) sequencers |
+
+**Example — plate 2 for Illumina (default, reverse i5):**
 
 ```bash
 python /home/labs/barkailab/vovam/pipelines/get_plate_indices.py 2 ./p2.csv
 ```
 
-The barcodes for that plate will be written to `p2.csv` in your current directory.
+**Example — plate 2 for AVITI (forward i5):**
+
+```bash
+python /home/labs/barkailab/vovam/pipelines/get_plate_indices.py 2 ./p2_aviti.csv frw
+```
+
+The barcodes for that plate will be written to the output CSV in your current directory.
 
 ## What the output looks like
 
 The CSV is already in the correct column order for the sequencing spreadsheet:
-**i7 → Index 1**, **reverse i5 → Index 2**.
+**i7 → Index 1**, **i5 → Index 2** (reverse-complement for Illumina, forward for AVITI).
 
 | Well | Index Pair | Index 1 (i7) | Index Pair | Index 2 (i5 rev) |
 | ---- | ---------- | ------------ | ---------- | ---------------- |
