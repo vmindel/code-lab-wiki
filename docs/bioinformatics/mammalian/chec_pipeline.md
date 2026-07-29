@@ -1,4 +1,4 @@
-# CheC-seq Pipeline
+# ChEC-seq Pipeline
 
 A Snakemake pipeline that processes CheC-seq fastqs through alignment, peak
 calling, bedgraph/summary generation, and QC — for hg38 and mm10 genomes.
