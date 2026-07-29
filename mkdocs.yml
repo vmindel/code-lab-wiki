@@ -96,6 +96,9 @@ nav:
           - bioinformatics/yeast/index.md
           - ChEC-seq: bioinformatics/yeast/chec_seq.md
           - Peak Calling (Homer): bioinformatics/yeast/peak_calling_homer.md
+      - Deep Learning:
+          - bioinformatics/deep_learning/index.md
+          - Cherimoya (WEXAC): bioinformatics/deep_learning/cherimoya.md
   - Lab:
       - lab/index.md
       - General:
