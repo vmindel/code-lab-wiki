@@ -89,6 +89,7 @@ nav:
               - Elbow-Point Threshold for Peak Subsetting (R): bioinformatics/general/code_snippets/r_elbow_peak_threshold.md
       - Mammalian:
           - bioinformatics/mammalian/index.md
+          - CheC-seq Pipeline: bioinformatics/mammalian/chec_pipeline.md
           - Peak Calling (MACS3): bioinformatics/mammalian/peak_calling_macs3.md
           - CREs Data (SCREEN): bioinformatics/mammalian/cres_screen.md
       - Yeast:
