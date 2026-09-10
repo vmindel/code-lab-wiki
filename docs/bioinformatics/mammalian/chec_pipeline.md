@@ -65,17 +65,74 @@ unless you're adding new samples or output locations.
 conda activate snakemake_runner
 cd ~/my_run/hepg2   # or nmumg
 
-snakemake all --snakefile Snakefile \
-  --executor cluster-generic \
-  --rerun-incomplete \
-  --cluster-generic-submit-cmd "bsub -n 8 -q short -R 'span[hosts=1]' -R 'rusage[mem=2000]'" \
-  --jobs 30 --latency-wait 120 \
-  --use-conda --conda-frontend conda
+snakemake all --profile profiles/lsf
 ```
+
+All the cluster settings live in `profiles/lsf/config.yaml`, shipped with the
+template: the LSF executor, the `bsub` line, `--jobs 30`, `--latency-wait 120`,
+`--rerun-incomplete` and `--use-conda`. Every pipeline rule is submitted with
+the same `bsub -n 8 -q short -R 'span[hosts=1]' -R 'rusage[mem=2000]'` line as
+before, and per-job LSF logs go to `logs/lsf/`.
+
+??? note "The old long command (pre-September 2026 template copies)"
+    Copies of the template made before 2026-09-10 have no `profiles/` folder.
+    They still run with the original command:
+
+    ```bash
+    snakemake all --snakefile Snakefile \
+      --executor cluster-generic \
+      --rerun-incomplete \
+      --cluster-generic-submit-cmd "bsub -n 8 -q short -R 'span[hosts=1]' -R 'rusage[mem=2000]'" \
+      --jobs 30 --latency-wait 120 \
+      --use-conda --conda-frontend conda
+    ```
 
 The first time you run this, Snakemake will build the conda environment
 from `environment.yaml` — this takes a few minutes but only happens once
 (it's cached under `.snakemake/conda/` and reused on every later run).
+
+!!! warning "Activate `snakemake_runner` first"
+    With the profile, Snakemake checks the conda version before doing
+    anything. Without the env active it stops with *"Conda must be version
+    24.7.1 or later"*.
+
+## 4. Motif discovery (fast QC, GPU)
+
+Once `cleaned_peaks/` exists, you can run de novo motif discovery on the 1000
+strongest peaks of every sample:
+
+```bash
+snakemake motifs_all --profile profiles/lsf
+```
+
+- It is **opt-in** and not part of `all`, so it never holds up or fails a data
+  run. Run it with the pipeline or at any time afterwards.
+- Each sample takes ~1–4 min on one `short-gpu` GPU, and up to 10 samples run
+  at once (change with `--resources gpu=N`). For comparison, 42 samples took
+  ~20 min with the earlier cap of 2.
+- Nothing to install: it uses a shared, pinned env at
+  `/home/labs/barkailab/LAB/envs/pystreme`, and `environment.yaml` is unchanged.
+
+Results land in `results/motifs/`:
+
+| File | What it is |
+| --- | --- |
+| `{id}.motifs.pdf` | Up to 10 motifs, most significant first: logo, positional histogram, best HOCOMOCO v12 match in the title |
+| `{id}.summary.tsv` | One row per motif: `passes_holdout`, consensus, width, sites, `holdout_logp`, `central_logp` |
+| `{id}.annotation.tsv` | Top 3 HOCOMOCO v12 matches per motif |
+| `{id}.meme`, `{id}.sites.bed` | **Significant motifs only**, for FIMO/Tomtom or browsing sites |
+| `{id}.provenance.tsv` | Which pystreme commit and settings produced the results |
+
+!!! tip "Reading it in 10 seconds"
+    Look at motif 1 in the PDF. The tagged factor's own motif at rank 1, or
+    just below a strong co-factor, with `holdout_logp` far below -3.0 means
+    the sample looks right. Motifs above -3.0 are shown but labelled
+    **BELOW hold-out threshold**: treat them as noise. Details, the statistics
+    and the settings are on the [pystreme motif discovery](../general/pystreme_motif.md) page.
+
+If your run folder is owned by someone else (so you can't write into it),
+make your own folder with symlinks to their `fastqs/` and `cleaned_peaks/`,
+copy in the template files, and run `motifs_all` there.
 
 ## Notes
 
@@ -88,5 +145,13 @@ from `environment.yaml` — this takes a few minutes but only happens once
   references it, which forces a full pipeline rerun (including the
   expensive alignment step).
 
-## Roadmap.
-- Soon I will add the possibilty to run the de-novo motif enrichemnt for those who have the [Homer installed in their path](../general/homer_motif.md) right away in the pipeline.
+- Don't `pip install` into the shared pystreme env. A new pystreme version
+  gets its own pinned env, so older motif results stay reproducible.
+
+## Changelog
+
+- **2026-09-10:** Added opt-in motif discovery (`motifs_all`, pystreme on
+  GPU) and the `profiles/lsf` run command. The pre-change template is backed up at
+  `Unsorted_processed/checseq_pipeline_template_backup_20260910_pre-pystreme.zip`.
+  [Homer](../general/homer_motif.md) is still available for known-motif
+  enrichment outside the pipeline.

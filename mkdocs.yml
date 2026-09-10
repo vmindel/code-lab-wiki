@@ -79,6 +79,7 @@ nav:
           - File Formats: bioinformatics/general/formats.md
           - Submitting Data to GEO: bioinformatics/general/sra_submission.md
           - Motif Finding (Homer): bioinformatics/general/homer_motif.md
+          - Motif Discovery (pystreme, GPU): bioinformatics/general/pystreme_motif.md
           - ChEC-seq V-plots: bioinformatics/general/chec_vplots.md
           - Useful Code Snippets:
               - bioinformatics/general/code_snippets/index.md
