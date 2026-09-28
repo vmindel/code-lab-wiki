@@ -51,8 +51,7 @@ already satisfied and leaves it alone.
     applies unchanged. One further change: **one MoDISco + Fi-NeMo run per
     head** (count and profile), each head scanned with its own motifs — never
     a unified motif set across heads. See
-    [§10 of the base tutorial](cherimoya.md#10-interpretation-at-scale-use-ism-and-run-each-head-separately)
-    and [the KLF/SP result set](klf_sp_models.md).
+    [§10 of the base tutorial](cherimoya.md#10-interpretation-at-scale-use-ism-and-run-each-head-separately).
 
 
 `cherimoya attribute` writes `RUN_NAME.attributions.ohe.npz` (one-hot
@@ -192,7 +191,5 @@ discovery peaks.
 ## See also
 
 - [Cherimoya (WEXAC)](cherimoya.md) / [Cherimoya from raw BAMs](cherimoya_raw_bams.md)
-- [KLF/SP ChEC-seq models](klf_sp_models.md) — 52 Fi-NeMo runs over 64k loci,
-  and where their hits live.
 - [Fi-NeMo GitHub](https://github.com/kundajelab/Fi-NeMo) /
   [API docs](https://kundajelab.github.io/Fi-NeMo/finemo.html)

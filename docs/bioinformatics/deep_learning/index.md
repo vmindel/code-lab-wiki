@@ -16,6 +16,3 @@ including cluster-specific setup and gotchas.
 - **[Fi-NeMo](finemo.md)** — calling individual motif instances from a model's
   attributions, and how to read its QC tables (use `cwm_similarity`, not
   `seqlet_recall`).
-- **[KLF/SP Models](klf_sp_models.md)** — the KLF-paper result set: 26
-  mammalian models, 38 yeast fine-tunes, 52 interpretation runs, their
-  numbers, and which file to open.

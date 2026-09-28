@@ -180,5 +180,3 @@ arrays afterward with `numpy.concatenate(..., axis=0)`.
   distilled from.
 - [Fi-NeMo](finemo.md) — motif hit-calling directly from a Cherimoya model's
   attribution output.
-- [KLF/SP ChEC-seq models](klf_sp_models.md) — the 26 mammalian models these
-  lessons produced, their yeast fine-tunes, and where everything lives.
