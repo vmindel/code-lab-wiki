@@ -81,6 +81,7 @@ nav:
           - Motif Finding (Homer): bioinformatics/general/homer_motif.md
           - Motif Discovery (pystreme, GPU): bioinformatics/general/pystreme_motif.md
           - ChEC-seq V-plots: bioinformatics/general/chec_vplots.md
+          - Local LLM + OpenCode (WEXAC): bioinformatics/general/local_llm_opencode.md
           - Useful Code Snippets:
               - bioinformatics/general/code_snippets/index.md
               - Consensus Peaks + Signal (R): bioinformatics/general/code_snippets/r_consensus_peaks_signal.md
