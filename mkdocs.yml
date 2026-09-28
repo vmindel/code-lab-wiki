@@ -101,6 +101,9 @@ nav:
       - Deep Learning:
           - bioinformatics/deep_learning/index.md
           - Cherimoya (WEXAC): bioinformatics/deep_learning/cherimoya.md
+          - Cherimoya from Raw BAMs: bioinformatics/deep_learning/cherimoya_raw_bams.md
+          - Fi-NeMo (Motif Hit-Calling): bioinformatics/deep_learning/finemo.md
+          - KLF/SP Models (Result Set): bioinformatics/deep_learning/klf_sp_models.md
   - Lab:
       - lab/index.md
       - General:
