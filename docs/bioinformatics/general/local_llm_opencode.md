@@ -159,7 +159,7 @@ Add this to `~/.config/opencode/opencode.json`:
           "modelID": "unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
           "limit": {
             "context": 262144,
-            "output": 2048
+            "output": 32768
           }
         }
       }
